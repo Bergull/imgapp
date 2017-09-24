@@ -11,20 +11,20 @@
  *
  * @author dedek
  */
-class ContactController extends Controller {
+class LoginController extends Controller {
 
 //put your code here
     public function zpracuj($parametry) {
         $this->header = array("title" => 'Contactform', "description" => "contact form desc", "keywords" => "contact form words");
 
-        if (isset($_POST["email"])) {
+        if (isset($_POST["login"])) {
             if ($_POST['rok'] == date("Y")) {
-                $odesilacEmailu = new MailSender();
-                $odesilacEmailu->odesli("admin@adresa.cz", "Email z webu", $_POST['zprava'], $_POST['email']);
+               // $odesilacEmailu = new MailSender();
+                //$odesilacEmailu->odesli("admin@adresa.cz", "Email z webu", $_POST['zprava'], $_POST['email']);
             }
         }
 
-        $this->view = 'contact';
+        $this->view = 'login';
     }
 
 }

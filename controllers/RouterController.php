@@ -33,6 +33,8 @@ class RouterController extends Controller {
         } else {
             $this->presmeruj('error');
         }
+        
+        
         $this->controller->zpracuj($parametryURL);
 
         $this->data['title'] = $this->controller->header['title'];
