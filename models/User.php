@@ -13,4 +13,12 @@
  */
 class User {
     //put your code here
+    
+    private $username = "";
+    private $privillege = "";
+    
+    function __construct($username, $privillege) {
+        $this->username=$username;
+        $this->privillege=$privillege;
+    }
 }
